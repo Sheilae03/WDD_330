@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 Notes</title>
+</head>
+<body>
+    <h5>"this"</h5>
+    <ul>
+        <li>When a function is declared, it may use this, but that this has no value until the function is called.</li>
+        <li>A function can be copied between objects.</li>
+        <li>When a function is called in the “method” syntax: object.method(), the value of this during the call is object.</li>
+    </ul>
+    <p>To access an object, you can use the method of "this" as a keyword.<br>
+    *The value of this is the object “before dot”, the one used to call the method.
+    <br>
+    *"this" is not bound. It can be used in any function, even if it is not a method of an object.
+    <br>
+    *"this" is not used with an arrow function</p>
+    <br>
+    <h5>Methods</h5>
+    <ul>
+        <li>Functions that are stored in object properties are called “methods”.</li>
+        <li> Methods allow objects to “act” like object.doSomething().</li>  
+        <li>Methods can reference the object as this.</li>
+    </ul>
+    <h5>Objects</h5>
+    <ul>
+        <li>Object literals</li>
+        <p>*An object in JavaScript is a self-contained set of related values and functions. They act as a collection of named properties<br>
+            that map to any JavaScript value such as strings, numbers, booleans, arrays and functions. If a propertys value is a function,<br>
+            it is known as a method.<br>
+            *An object literal is an object that is created directly in the language by wrapping all its properties and methods in curly braces {}. </p>
+        <li>Adding properties to objects</li>
+        <p>*New properties and methods can be added to objects at any time in a program. This is done by simply assigning a value to the new property.<br>
+           *Any property can be removed from an object using the delete operator.<br>
+           *It is even possible for an object to contain other objects. These are known as nested objects.<br>
+           *Objects as Parameters to Functions </p>
+        <li>Object methods</li>
+        <li>JSON</li>
+        <p>*JSON is a lightweight data-storage format.<br>
+           *Property names must be double-quoted<br>
+           *Permitted values are double-quoted strings, numbers, true, false, null, arrays and objects<br>
+           *Functions are not permitted values<br>
+           *The parse() method takes a string of data in JSON format and returns a JavaScript object<br>
+           *The stringify() method does the opposite, taking a JavaScript object and returning a string of JSON data</p>
+        <li>The Math object</li>
+        <p>*The Math object is a built-in object that has several properties representing mathematical constants,<br>
+            as well as methods that carry out a number of common mathematical operations.<br>
+           *All the properties and methods of the Math object are immutable and unable to be changed.<br>
+           *Built in Math functions</p>
+           <ul>
+            <li>The Math.abs() method returns the absolute value of a number. </li>
+            <li>The Math.ceil() method will round a number up to the next integer, or remain the same if it is already an integer</li>
+            <li>The Math.floor() method will round a number down to the next integer, or remain the same if it is already an integer</li>
+            <li>The Math.round() method will round a number to the nearest integer</li>
+            <li> Math.trunc() method that returns the integer-part of a number that is, it gets truncated at the decimal point</li>
+            <li>The Math.exp() method will raise a number to the power of Eulers constant</li>
+            <li> Math.pow() method will raise any number (the first argument) to the power of another number (the second argument)</li>
+            <li> Math.pow() method will raise any number (the first argument) to the power of another number (the second argument)</li>
+            <li>The Math.cbrt() method was introduced in ES6, which returns the cube root of numbers</li>
+            <li>The Math.hypot() method was also introduced in ES6. It returns the square root of the sum of the squares of all its arguments.</li>
+            <li>The Math.log() method returns the natural logarithm of a number</li>
+            <li>The Math.max() method returns the maximum number from its arguments</li>
+            <li>Math.min() method unsurprisingly returns the minimum number from the given arguments</li>
+            <li>The Math.tan() returns the tangent of an angle</li>
+            <li>The Math.asin() returns the arcsine of a number. The result is an angle</li>
+            <li>The Math.acos() returns the arccosine of a number. The result is an angle</li>
+
+           </ul>
+        <li>The Date object</li>
+        <p>Date objects contain information about dates and times. Each object represents a single moment in time.</p>
+        <li>The RegExp object</li>
+    </ul>
+    <h5>Getting Elements-shortcuts</h5>
+    <ul>
+        <li>Document.body returns the body element of a web page</li>
+        <li>Document.images returns a node list of all the images contained in the document.</li>
+        <li>Document.links returns a node list of all the <a> elements and <area> elements that have an href attribute.</li>
+        <li>Document.anchors returns a node list of all the <a> elements that have a name attribute.</li>
+        <li>Document.forms returns a node list of all the forms in the document.</li>
+    </ul>
+    <p>*The getElementById() method does exactly what it says on the tin. It returns a reference to the element with a unique id attribute<br>
+     that is given as an argument. Every id attribute should be unique to just one element <br>
+    *getElementsByClassName() will return a live node list of all elements that have the class name that is supplied as an argument.</p>
+    <h5>**Node lists are array-like objects, but they are not arrays. You can access each item using index notation.**</h5>
+    <h5>Setting an attribute</h5>
+    <p>The setAttribute can change the value of an elements attributes. It takes two arguments: the attribute that you wish to change,<br>
+     and the new value of that attribute.</p>
+     <br>
+     <h5>.addEventListener</h5>
+     <ul>
+         <li>'click'</li>
+         <li>'mousedown'</li>
+         <li>'mouseup'</li>
+         <li>'dbleclick'</li>
+         <li>'keydown'</li>
+         <li>'keypress'</li>
+         <li>'keyup'</li>
+         <li>'touchstart'</li>
+         <li>'touched'</li>
+         <li>'touchmove'</li>
+         <li>'touchcenter'</li>
+         <li>'touchleave'</li>
+         <li>'touchcancel'</li>
+     </ul>
+     <p>*An event listener can be removed using the removeEventListener() method.</p>
+
+</body>
+</html>
