@@ -7,7 +7,7 @@ const links = [
       url: "week2/index.html",
 
       label:"Week3 notes",
-      url: "week2/index.html"
+      url: "week3/index.html"
 
 
     }
