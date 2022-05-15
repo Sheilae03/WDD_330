@@ -7,7 +7,10 @@ const links = [
       url: "week2/index.html",
 
       label:"Week3 notes",
-      url: "week3/index.html"
+      url: "week3/index.html",
+
+      label:"Week4 notes",
+      url: "week4/index.html"
 
 
     }
@@ -27,3 +30,4 @@ const links = [
          ol.appendChild(li);
      })
   }
+  

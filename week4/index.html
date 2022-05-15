@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5 Notes</title>
+</head>
+<body>
+    <h5>Forms</h5>
+    <p>Forms are made up of a <form> element that contains form controls such as input fields, select menus and buttons.
+    <br> These input fields can be populated with information that is processed once the form has been submitted.
+    * You can use Javascript to process the information on the front end.
+    <br> *This value can be changed by a user entering information or interacting with the form’s interface
+    </p>
+    <h5>Accessing Form Elements</h5>
+    <p>The property is called document.forms<br>
+    *const form = document.forms[0]<br>
+    *const form = document.getElementsByTagname('form')[0]</p>
+    <br>
+    <h5>Methods/Properties</h5>
+    <ul>
+        <li>form.submit()</li>
+        <li>form.reset()</li>
+        <li>form.action</li>
+
+    </ul>
+    <br>
+    <h5>Submitting a Form</h5>
+    <p>Possibly the most important form event is the submit event, occurring when the form is submitted. <br>
+    Usually this will send the content of the form to the server to be processed, but we can use JavaScript to<br>
+     intercept the form before its sent by adding a submit event listener.<br>
+    Example code:<br>
+    const form = document.forms['search'];
+    form.addEventListener ('submit', search, false);
+
+    function search() {
+         alert(' Form Submitted');
+}
+</p><br>
+    <h5>Placeholder Attribute</h5>
+    <p>*add a placeholder to you input and it will let the user know what they need to put in to that space.</p>
+    <br>
+    <h5>Form Controls</h5>
+    <ul>
+        <li>input</li>
+        <li>select</li>
+        <li>textarea</li>
+        <li>button</li>
+    </ul>
+    <br>
+    <h5>Form Validation</h5>
+    <ul>
+        <li>A required field is completed</li>
+        <li>An email address is valid</li>
+        <li>A number is entered when numerical data is required</li>
+        <li>A password is at least a minimum number of characters</li>
+    </ul>
+    <h5>Object Oriented Programming</h5>
+    <p>*Object-oriented programming is often used to model representations of objects in the real world. </p>
+    <br>
+    <ul>
+        <li>Encapsulation</li>
+        <li>Polymorphism</li>
+        <li>Inheritance</li>
+        <li>Classes</li>
+    </ul>
+    <br>
+    <h5>Public and Private Methods</h5>
+    <p>**By default, an objects methods are public in JavaScript. Methods and properties are said to be public<br>
+         because they can be queried directly and changed by assignment. The dynamic nature of the language means that an objects properties and methods<br>
+         can be changed after it has been created.</p>
+         <br>
+    <h5>Inheritance</h5>
+    <p>The examples we have seen so far have all demonstrated inheritance by inheriting properties and methods from the prototype.<br>
+     But the prototype is just another object.</p>
+     <br>
+     <h5>Polymorphism</h5>
+     <p>The concept of polymorphism means that different objects can have the same method, but implement it in different ways.</p>
+<br>
+     <h5>Property Attributes and Descriptions</h5>
+     <ul>
+         <li>value ― This is the value of the property and is undefined by default</li>
+         <li>writable ― This boolean value shows whether a property can be changed or not, and is false by default</li>
+         <li>enumerable ― this boolean value shows whether a property will show up when the object is displayed in a for in loop, and is false by default</li>
+         <li>configurable ― this boolean value shows whether you can delete a property or change any of its attributes, and is false by default.</li>
+
+     </ul>
+     <br>
+     <h5>Getters and Setters</h5>
+     <p>An object property descriptor can have get() and set() methods instead of a value attribute. All objects must have one or the other, they can't have both.<br>
+     The get() and set() methods can be used to control how a property is set using assignment and the value that is returned when a property is queried.<br>
+     The get and set property descriptors are particularly useful for controlling the getting and setting of properties in classes.<br>
+    </p>
+
+    <h5>Modern JavaScript</h5>
+    <ul>
+        <li>Libraries-A JavaScript library is a piece of code that provides several methods that make it easier to achieve common tasks.</li>
+        <li>Modular JavaScript-A module is a self-contained piece of code that provides functions and methods that can then be used in other files and by other modules. </li>
+        <li>MVC framework-Models/views/controllers</li>
+        <li>Package managers-A package is just a directory with one or more files of code, as well as a package.json file that contains information about the code in the package. </li>
+        
+    </ul>
+
+</body>
+</html>
