@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week7 Notes</title>
+</head>
+<body>
+    <h3>Functions</h3>
+    <p>***functions are first-class objects**
+    <br> The call() method can be used to set the value of this inside a function to an object that is provided as the first argument.<br>
+    We can create some objects that have a name property, then use the call() method to invoke the sayHello() function, providing each object as an argument.<br>
+    If the function that is called requires any parameters, these need to be provided as arguments after the first argument, which is always the value of this.<br>
+    If a function does not refer to an object as this in its body, it can still be called using the call() method, but you need provide null as its first argument. <br>
+
+    </p>
+    <p>The apply() method works in the same way, except the arguments of the function are provided as an array.<br>
+    </p>
+    <h5>Memoication/cache</h5>
+    <p>A useful feature of this is that it provides result caching, or memoization.<br>
+        If a function takes some time to compute a return value, we can save the result in a cache property. Then if the same argument is used again later, we can return <br>
+        the value from the cache, rather than having to compute the result again.</p>
+        <br>
+
+    <h5>Immediately Invoked Function Expression or IIFE</h5>
+    <p>IIFEs are a useful way of performing a task while keeping any variables wrapped up within the scope of the function.<br>
+        An IIFE can be used to set up any initialization code that there will be no need for again. Because the code is only run once,<br>
+        there is no need to create any reusable, named functions, and all the variables will also be temporary. An IIFE will be invoked once, <br>
+        and can set up any variables, objects and event handlers when the page loads.<br>
+        An IIFE can be used to enclose a block of code inside its own private scope so it does not interfere with any other part of the program.<br>
+        Using IIFEs in this way means code can be added or removed separately.  </p><br>
+    <h5>**Losing Properties**</h5>
+    <p>If any properties have previously been set on the function, these will be lost when the function redefines itself. </p>
+    <h5>Init-Time Branching</h5>
+    <p>This technique can be used with the feature detection that we discussed in the last chapter to create functions that rewrite themselves, known as init-time branching.<br>
+    This enables the functions to work more effectively in the browser, and avoid checking for features every time they are invoked.<br>
+    Once the function has been invoked, it is rewritten based on the browsers capabilities.</p>
+    <h5>Recursive Functions</h5>
+    <p>A recursive function is one that invokes itself until a certain condition is met. It is a useful tool to use when iterative processes are involved.</p>
+    <br>
+    <h5>Callback Hell</h5>
+    <p>Callback hell is the term used to refer to this tangled mess of code, and it's such a common issue that it even has its own website!</p>
+    <br>
+    <h5>Promises</h5>
+    <p>A promise represents the future result of an asynchronous operation. Promises don't do anything that can't already be achieved using callbacks, but they help simplify the<br>
+    process, and avoid the convoluted code that can result from using multiple callbacks.<br>
+    The Promise Life Cycle- When a promise is created, it calls an asynchronous operation and is then said to be pending. It remains in this state while the operation is taking place.<br>
+    At this stage, the promise is said to be unsettled. Once the operation has completed, the promise is said to have been settled. A settled promise can result in two different outcomes: <br>
+</p>
+<ul>
+    <li>Resolved ― the asynchronous operation was completed successfully.</li>
+    <li>Rejected ― the asynchronous operation did not work as expected, wasn't successfully completed or resulted in an error.</li>
+</ul>
+<h5>Creating a Promise</h5>
+<p>A promise is created using a constructor function. This takes a function called an executor as an argument. The executor initializes the promise and starts the asynchronous operation.<br>
+It also accepts two functions as arguments: the resolve() function is called if the operation is successful, and the reject() function is called if the operation fails. </p>
+<br>
+<h5>Async Functions</h5>
+<p>These functions are preceded by the async keyword and allow you to write asynchronous code as if it was synchronous. This is achieved by using the await operator before an asynchronous function.<br>
+This will wrap the return value of the function in a promise that can then be assigned to a variable. </p>
+<br>
+<h5>Generators</h5>
+<p>These are special functions used to produce iterators that maintain the state of a value.<br>
+    To define a generator function, an asterisk symbol (*) is placed after the function declaration</p>
+<br>
+<h5>Higher-Order Functions</h5>
+<p>Higher-order functions are functions that accept another function as an argument, or return another function as a result, or both.</p>
+<h5>Curring</h5>
+<p>Currying is a process that involves the partial application of functions. <br>
+    Currying relies on higher-order functions that are able to return partially applied functions. All curried functions are higher-order functions because they return a function, but not all higher-order <br>
+    functions are curried.
+</p>
+<br>
+<h3>Ajax</h3>
+<p>***Ajax is a technique that allows web pages to communicate asynchronously with a server, and it dynamically updates web pages without reloading. ***</p>
+<br>
+<h5>Clients and Servers</h5>
+<p>The web of computers known as the internet can be separated into two parts: clients and servers. A client, such as a web browser, will request a resource (usually a web page) from a server, which processes<br>
+     the request and sends back a response to the client.<br>
+     A server is required when requesting resources using Ajax. Typically this involves using a server-side language, such as PHP, Ruby, Node.js, or .NET to serve the data response following an Ajax request. </p>
+<br>
+<h5>The Fetch API</h5>
+<p>The Fetch API is currently a living standard for requesting and sending data asynchronously across a network. The Fetch API uses promises to avoid callback hell, and also streamlines a number of concepts<br>
+    that had become cumbersome when using the XMLHttpRequest object.<br>
+Basic Usage: The Fetch API provides a global fetch() method that only has one mandatory argument, which is the URL of the resource you wish to fetch.<br>
+Response Interface:The Fetch API introduced the Response interface that deals with the object that’s returned when the promise is fulfilled. Response objects have a number of properties and methods that allow us to process the response effectively.<br>
+</p>
+<br>
+<p>Some other properties of the Response object are:</p>
+<ul>
+    <li>headers: A Headers object (see later section) containing any headers associated with the response</li>
+    <li>url: A string containing the URL of response</li>
+    <li>redirected: A boolean value that specifies if the response is the result of a redirect</li>
+    <li>type: A string value of 'basic', 'cors', 'error' or 'opaque'. A value of 'basic' is used for a response from the same domain. A value of 'cors' means the data was received from a valid cross-origin request from a different domain.<br>
+        A value of 'opaque' is used for a response received from 'no-cors' request from another domain, which means access to the data will be severely restricted. A value of 'error' is used when a network error occurs.</li>
+</ul>
+<h5>Redirects</h5>
+<p>The redirect() method can be used to redirect to another URL. It creates a new promise that resolves to the response from the redirected URL.</p>
+<h5>Text Responses</h5>
+<p>The text() method takes a stream of text from the response, reads it to completion and then returns a promise that resolves to a USVSting object that can be treated as a string in JavaScript.</p>
+<h5>File Responses</h5>
+<p>The blob() method is used to read a file of raw data, such as an image or a spreadsheet. Once it has read the whole file, it returns a promise that resolves with a blob object.</p>
+<h5>JSON Responses</h5>
+<p>JSON is probably the most common format for AJAX responses. The json() method is used to deal with these by transforming a stream of JSON data into a promise that resolves to a JavaScript object.</p>
+<br>
+<h5> Hypertext Transfer Protocol/HTTP</h5>
+<ul>
+    <li>GET</li>
+    <li>POST</li>
+    <li>PUT</li>
+    <li>PATCH</li>
+    <li>DELETE</li>
+</ul>
+<br>
+<h5>Headers object</h5>
+<ul>
+    <li>has() -Can be used to check if the headers object contains the header provided as an argument.</li>
+    <li>get() -Returns the value of the header provided as an argument</li>
+    <li>set() -Can be used to set a value of an already existing header, or create a new header with the value provided as an argument if it does not already exist.</li>
+    <li>append() -Adds a new header to the headers object.</li>
+    <li>keys(), values() and entries() -Iterators that can be used to iterate over the headers key, values or entries (key and value pairs).</li>
+</ul>
+<br>
+<h5>FormData</h5>
+<p>The Fetch API includes the FormData interface, which makes it much easier to submit information in forms using Ajax.
+    A FormData instance is created using a constructor function.</p>
+    
+
+
+
+</body>
+</html>
