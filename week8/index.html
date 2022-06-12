@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8 Notes</title>
+</head>
+<body>
+    <h3>CSS3 Transforms/Transitions</h3>
+    <h5>Transforms</h5>
+    <p>The CSS3 transform property lets you lets you translate, rotate, scale, and/or skew any element on the page. 
+        <br>We can manipulate an elements appearance using transform functions. The value of the transform property<br>
+         is one or more transform functions (separated by spaces) that will be applied in the order they are provided.
+    </p>
+    <h5>Translation</h5>
+    <p>Translation functions allow you to move elements left, right, up, or down. These functions are similar to the behavior<br>
+         of position: relative; when declaring top and left, moving elements up and down or left and right along the x and y axes.<br>
+         The translate(x,y) function moves an element x from the left, and y from the top. <br>
+        ***Transforms do not work on inline elements. But that is easy enough to fix. Just add display: inline-block;</p>
+
+    <h5>Scaling</h5>
+    <p>The scale(x,y) function scales an element by the defined factors horizontally then vertically. If only one value is provided, it will be<br>
+         used for both the x and y values, growing or shrinking your element or pseudo-element while maintaining the original aspect ratio.<br>
+         As with translate, you can also use the scaleX(x) or scaleY(y) functions. These functions will scale only the horizontal dimensions or only the vertical dimensions respectively.<br>
+         A scaled element will grow outwards from or shrink inwards towards its center; in other words, the elements center will stay in the same place as its dimensions change.</p>
+    <h5>Roation</h5>  
+    <p>The rotate() function rotates an element around the point of origin by a specified angle value. <br>
+        angles are declared in degrees, with positive degrees moving clockwise and negative moving counterclockwise. </p>
+        
+    <h5>Skew</h5>
+    <p>The skew(x,y) function specifies a skew along the x and y axes. As you would expect, the x specifies the skew on the x axis, and the y specifies the skew on the y axis. If the second<br>
+     parameter is omitted, the skew will only occur on the x axis</p>
+    
+    <h5>Transitions</h5>
+    <p>Transitions allow the values of CSS properties to change over time, essentially providing simple animations. <br>
+        CSS transitions are declared along with the regular styles on an element. Whenever the target properties change, the browser will apply the transition making the change gradual.<br>
+    </p>
+    <ul>
+        <li>transition-property:defines the CSS properties of the element that should be transitioned, with all for all properties being the default.</li>
+        <li>transition-duration:sets how long the transition will take: the duration of time it takes to go from the default state to the transitioned state. </li>
+        <li>transition-timing-function:lets you control the pace of the transition in even more granular detail.</li>
+        <li>transition-delay: a delay before the transition begins. Normally a transition begins immediately, so the default is 0. Include the number of milliseconds (ms) or seconds (s) to delay the transition. </li>
+    </ul>
+    <h5>Keyframes</h5>
+    <p>To animate an element in CSS, you first create a named animation, then attach it to an element in that elements property declaration block.<br>
+        To create an animation, use the @keyframes or @-webkit-keyframes followed by the name of the animation </p>
+    
+        <h5>Canvas</h5>
+        <p>**The first step to using canvas is to add a canvas element to the page<br>
+        **Paths create a blueprint for your lines, arcs, and shapes, but paths are invisible until you give them a stroke<br>
+        **beginPath(),closePath(),fill(),stroke() <br>
+        **we can use the APIs toDataURL method to save our drawing.<br>
+        **draw fuctions:</p>
+
+        <h5>SVG - Scalable Vector Graphics</h5>
+
+    </body>
+
+</html>
