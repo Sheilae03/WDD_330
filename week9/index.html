@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 9 Notes</title>
+</head>
+<body>
+    <h3>The Browser Object Model</h3>
+    <p>The Browser Object Model (or BOM for short) is a collection of properties and methods that contain information about the browser and computer screen.<br>
+        There is no official standard for the BOM, although there are a number of properties and methods that are supported by all the major browsers, making a sort of de facto standard.<br>
+     These properties and methods are made available through the window object. Every browser window, tab, popup, frame, and iframe has a window object.<br>
+    </p>
+    <h5>Going Global</h5>
+    <p></p>
+    global variables. These are variables that are created without using the const, let or var keywords. Global variables can be accessed in all parts of the program.
+
+    <h5>Dialogs</h5>
+  Three functions that produced dialogs in the browsers: alert(), confirm() and prompt().<br>
+  The window.alert() method will pause the execution of the program and display a message in a dialog box.<br>
+  The window.prompt() method will stop the execution of the program. </p>
+
+  <h5>Browser information</h5>
+  <p>The window object has a number of properties and methods that provide information about the users browser.</p>
+  <h5>Location Properties</h5>
+  <ul>
+    <li>The protocol property returns a string describing the protocol used (such as http, https, pop2, ftp etc.).</li>
+    <li>The host property returns a string describing the domain of the current URL and the port number (this is often omitted if the default port 80 is used):</li>
+    <li>The hostname property returns a string describing the domain of the current URL:</li>
+    <li>The port property returns a string describing the port number, although it will return an empty string if the port is not explicitly stated in the URL:</li>
+    <li>The pathname property returns a string of the path that follows the domain:</li>
+    <li>The search property returns a string that starts with a “?” followed by the query string parameters. It returns an empty string if there are no query string parameters.</li>
+    <li>The origin property returns a string that shows the protocol and domain where the current page originated from. This property is read-only, so cannot be changed:</li>
+
+</ul>
+<h5>Location Methods</h5>
+<ul>
+    <li>The reload() method can be used to force a reload of the current page. If it is given a parameter of true, it will force the browser to reload the page from the server, instead of using a cached page.</li>
+    <li>The assign() method can be used to load another resource from a URL provided as a parameter, for example:</li>
+    <li>The replace() method is almost the same as the assign() method, except the current page will not be stored in the session history, so the user will be unable to navigate back to it using the back button.</li>
+    <li>The toString() method returns a string containing the whole URL:  </li>
+</ul>
+
+<h5>The Document Objet</h5>
+<p>Each window object contains a document object. This object has properties and methods that deal with the page that has been loaded into the window.</p>
+<br>
+<h5>setInterval()</h5>
+<p>The window.setInterval() method works in a similar way to window.setTimeout(), except that it will repeatedly invoke the callback function after every given number of milliseconds.</p>
+<br>
+<h5>Animation</h5>
+<p>The setTimeOut() and setInterval() methods can be used to animate elements on a web page</p>
+<br>
+<h3>HTML5 APIs</h3>
+<br>
+<h5>The data- Attribute</h5>
+<p>The data- attribute is a way of embedding data in a web page using custom attributes that are ignored by the browser. They are also private to a page, so are not intended to be used by an external service-their sole purpose is to be used by a JavaScript program.</p>
+<ul>
+    <li>Start with data-</li>
+    <li>Contain only lowercase letters, numbers, hyphens, dots, colons or underscores.</li>
+    <li>Include an optional string value.</li>
+</ul>
+<h5>HTML5 Web Storage</h5>
+<p>The Web Storage API provides a key-value store on the clients computer that is similar to using cookies but has fewer restrictions, more storage capacity, and is generally easier to use.<br>
+    If a browser supports the Web Storage API, the window object will have a property called localStorage, which is a native object with a number of properties and methods used to store data.  </p>
+<h5>Local Storage/Event Listener properties</h5>
+<ul>
+    <li>key tells us the key of the item that changed</li>
+    <li>newValue tells us the new value to which it has been changed</li>
+    <li>oldValue tells us the previous value before it was changed</li>
+    <li>storageArea tells us if it is stored in local or session storage.</li>
+</ul>
+<h5>Position Object Properties</h5>
+<ul>
+    <li>position.speed property returns the ground speed of the device in meters per second.</li>
+    <li>position.altitude property returns an estimate of the devices altitude in meters above the WGS84 ellipsoid, which is a standard measurement for the center of the Earth.</li>
+    <li>position.heading property returns the direction the device is moving in. This is measured as a bearing in degrees, clockwise from North.</li>
+    <li>position.timestamp property returns the time that the position information was recorded.</li>
+</ul>
+<h5>Audio/Video clips</h5>
+<ul>
+    <li>The play event, which fires when the clip starts and when it resumes after a pause.</li>
+    <li>The pause event, which fires when the clip is paused.</li>
+    <li>The volumechange event, which fires when the volume is changed.</li>
+    <li>The loadedmetadata event, which we saw in the note above, and which fires when all the video's metadata has loaded.</li>
+</ul>
+</body>
+</html>
