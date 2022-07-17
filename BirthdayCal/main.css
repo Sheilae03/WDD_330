@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background:lightcyan;
+}
+section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    
+    
+}
+
+
+.app > div {
+    margin: .25rem;
+    padding: .25rem;
+    
+    
+
+}
+form {
+    margin: 2rem;
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    
+}
