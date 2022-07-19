@@ -12,6 +12,9 @@ section {
     
     
 }
+.app {
+    display: flex;
+}
 
 
 .app > div {
